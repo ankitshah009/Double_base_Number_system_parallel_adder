@@ -1,0 +1,5 @@
+verilog isim_temp "case.v"
+verilog isim_temp "temp.v"
+verilog isim_temp "addititon.v"
+verilog isim_temp "top.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

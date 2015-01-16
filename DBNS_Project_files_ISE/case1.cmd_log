@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "F:/pro/DSPA/proj_dspa/case1.xst" -ofn "F:/pro/DSPA/proj_dspa/case1.syr" 
+xst -intstyle ise -ifn "F:/pro/DSPA/proj_dspa/case1.xst" -ofn "F:/pro/DSPA/proj_dspa/case1.syr" 

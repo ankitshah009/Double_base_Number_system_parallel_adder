@@ -1,0 +1,407 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: addititon.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "addititon.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "addititon"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-3-ff1156
+
+---- Source Options
+Top Module Name                    : addititon
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\pro\DSPA\proj_dspa\case.v" into library work
+Parsing module <case1>.
+Analyzing Verilog file "F:\pro\DSPA\proj_dspa\addititon.v" into library work
+Parsing module <addititon>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <addititon>.
+
+Elaborating module <case1>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <addititon>.
+    Related source file is "F:\pro\DSPA\proj_dspa\addititon.v".
+    Summary:
+	no macro.
+Unit <addititon> synthesized.
+
+Synthesizing Unit <case1>.
+    Related source file is "F:\pro\DSPA\proj_dspa\case.v".
+    Found 2-bit register for signal <cout>.
+    Found 4-bit register for signal <out>.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0240> created at line 65.
+    Found 2-bit 4-to-1 multiplexer for signal <_n0243> created at line 65.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0248> created at line 353.
+    Found 2-bit 4-to-1 multiplexer for signal <_n0251> created at line 353.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0254> created at line 640.
+    Found 2-bit 4-to-1 multiplexer for signal <_n0257> created at line 640.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <case1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 12
+ 2-bit register                                        : 6
+ 4-bit register                                        : 6
+# Multiplexers                                         : 384
+ 2-bit 2-to-1 multiplexer                              : 174
+ 2-bit 4-to-1 multiplexer                              : 18
+ 4-bit 2-to-1 multiplexer                              : 174
+ 4-bit 4-to-1 multiplexer                              : 18
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+# Multiplexers                                         : 384
+ 2-bit 2-to-1 multiplexer                              : 174
+ 2-bit 4-to-1 multiplexer                              : 18
+ 4-bit 2-to-1 multiplexer                              : 174
+ 4-bit 4-to-1 multiplexer                              : 18
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <addititon> ...
+
+Optimizing unit <case1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block addititon, actual ratio is 0.
+FlipFlop case000/cout_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop case000/cout_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop case001/cout_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop case001/cout_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop case010/cout_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop case010/cout_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : addititon.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 736
+#      LUT2                        : 35
+#      LUT3                        : 68
+#      LUT4                        : 216
+#      LUT5                        : 110
+#      LUT6                        : 296
+#      MUXF7                       : 10
+#      VCC                         : 1
+# FlipFlops/Latches                : 42
+#      FDE                         : 42
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 84
+#      IBUF                        : 48
+#      OBUF                        : 36
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of  301440     0%  
+ Number of Slice LUTs:                  725  out of  150720     0%  
+    Number used as Logic:               725  out of  150720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    729
+   Number with an unused Flip Flop:     705  out of    729    96%  
+   Number with an unused LUT:             4  out of    729     0%  
+   Number of fully used LUT-FF pairs:    20  out of    729     2%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          85
+ Number of bonded IOBs:                  85  out of    600    14%  
+    IOB Flip Flops/Latches:              18
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 42    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.982ns (Maximum Frequency: 504.548MHz)
+   Minimum input arrival time before clock: 3.595ns
+   Maximum output required time after clock: 0.562ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 1.982ns (frequency: 504.548MHz)
+  Total number of paths / destination ports: 327 / 36
+-------------------------------------------------------------------------
+Delay:               1.982ns (Levels of Logic = 4)
+  Source:            case010/cout_0 (FF)
+  Destination:       case110/out_3 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: case010/cout_0 to case110/out_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             32   0.280   0.464  case010/cout_0 (case010/cout_0)
+     LUT6:I4->O            1   0.053   0.433  case110/Mmux_out[3]_input2[3]_mux_204_OUT351 (case110/Mmux_out[3]_input2[3]_mux_204_OUT35)
+     LUT6:I3->O            1   0.053   0.296  case110/Mmux_out[3]_input2[3]_mux_204_OUT41 (case110/Mmux_out[3]_input2[3]_mux_204_OUT4)
+     LUT3:I2->O            1   0.053   0.296  case110/Mmux_out[3]_input2[3]_mux_204_OUT43 (case110/Mmux_out[3]_input2[3]_mux_204_OUT42)
+     LUT6:I5->O            1   0.053   0.000  case110/Mmux_out[3]_input2[3]_mux_204_OUT411 (case110/out[3]_input2[3]_mux_204_OUT<3>)
+     FDE:D                    -0.012          case110/out_3
+    ----------------------------------------
+    Total                      1.982ns (0.492ns logic, 1.490ns route)
+                                       (24.8% logic, 75.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 7625 / 42
+-------------------------------------------------------------------------
+Offset:              3.595ns (Levels of Logic = 8)
+  Source:            store110_0<2> (PAD)
+  Destination:       case110/out_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: store110_0<2> to case110/out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   0.003   0.588  store110_0_2_IBUF (store110_0_2_IBUF)
+     LUT4:I0->O           14   0.053   0.652  case110/input1[3]_PWR_2_o_equal_30_o<3>1 (case110/Mmux_input2[3]_input2[3]_mux_128_OUT13)
+     LUT6:I1->O            2   0.053   0.599  case110/Mmux_input2[3]_input2[3]_mux_128_OUT6131 (case110/Mmux_input2[3]_input2[3]_mux_128_OUT613)
+     LUT6:I0->O            1   0.053   0.357  case110/Mmux_input2[3]_input2[3]_mux_128_OUT613 (case110/Mmux_input2[3]_input2[3]_mux_128_OUT616)
+     LUT6:I4->O            2   0.053   0.597  case110/Mmux_input2[3]_input2[3]_mux_128_OUT614 (case110/Mmux_input2[3]_input2[3]_mux_128_OUT61)
+     LUT6:I1->O            1   0.053   0.296  case110/Mmux_out[3]_input2[3]_mux_204_OUT19 (case110/Mmux_out[3]_input2[3]_mux_204_OUT19)
+     LUT5:I4->O            1   0.053   0.000  case110/Mmux_out[3]_input2[3]_mux_204_OUT110_F (N144)
+     MUXF7:I0->O           1   0.186   0.000  case110/Mmux_out[3]_input2[3]_mux_204_OUT110 (case110/out[3]_input2[3]_mux_204_OUT<0>)
+     FDE:D                    -0.012          case110/out_0
+    ----------------------------------------
+    Total                      3.595ns (0.507ns logic, 3.088ns route)
+                                       (14.1% logic, 85.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              0.562ns (Levels of Logic = 1)
+  Source:            case000/out_3 (FF)
+  Destination:       store000_0_out<3> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: case000/out_3 to store000_0_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.280   0.279  case000/out_3 (case000/out_3)
+     OBUF:I->O                 0.003          store000_0_out_3_OBUF (store000_0_out<3>)
+    ----------------------------------------
+    Total                      0.562ns (0.283ns logic, 0.279ns route)
+                                       (50.3% logic, 49.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    1.982|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.25 secs
+ 
+--> 
+
+Total memory usage is 257488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,29 @@
+ISim log file
+Running: F:\pro\DSPA\proj_dspa\addititon_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/pro/DSPA/proj_dspa/addititon_isim_beh.wdb 
+ISim P.28xd (signature 0xa0883be4)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /addititon/store000_0 1001 -radix bin
+# isim force add /addititon/store001_0 1010 -radix bin
+# isim force add /addititon/store010_0 1011 -radix bin
+# isim force add /addititon/store100_0 0100 -radix bin
+# isim force add /addititon/store100_0 0001 -radix bin
+# isim force add /addititon/store101_0 0010 -radix bin
+# isim force add /addititon/store110_0 0011 -radix bin
+# isim force add /addititon/store000_1 0110 -radix bin
+# isim force add /addititon/store001_1 0101 -radix bin
+# isim force add /addititon/store010_1 0100 -radix bin
+# isim force add /addititon/store100_1 0010 -radix bin
+# isim force add /addititon/store101_1 1000 -radix bin
+# isim force add /addititon/store110_1 1001 -radix bin
+# isim force add /addititon/clock 1 -radix bin -value 0 -radix bin -time 500 ns -repeat 1 us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us

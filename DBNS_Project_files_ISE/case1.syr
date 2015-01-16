@@ -1,0 +1,387 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Reading design: case1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "case1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "case1"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-3-ff1156
+
+---- Source Options
+Top Module Name                    : case1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\pro\DSPA\proj_dspa\case.v" into library work
+Parsing module <case1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <case1>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <case1>.
+    Related source file is "F:\pro\DSPA\proj_dspa\case.v".
+    Found 2-bit register for signal <cout>.
+    Found 4-bit register for signal <out>.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0236> created at line 61.
+    Found 2-bit 4-to-1 multiplexer for signal <_n0239> created at line 61.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0246> created at line 349.
+    Found 2-bit 4-to-1 multiplexer for signal <_n0249> created at line 349.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0252> created at line 636.
+    Found 2-bit 4-to-1 multiplexer for signal <_n0255> created at line 636.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+	inferred  82 Multiplexer(s).
+Unit <case1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+# Multiplexers                                         : 82
+ 2-bit 2-to-1 multiplexer                              : 38
+ 2-bit 4-to-1 multiplexer                              : 3
+ 4-bit 2-to-1 multiplexer                              : 38
+ 4-bit 4-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+# Multiplexers                                         : 82
+ 2-bit 2-to-1 multiplexer                              : 38
+ 2-bit 4-to-1 multiplexer                              : 3
+ 4-bit 2-to-1 multiplexer                              : 38
+ 4-bit 4-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <case1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block case1, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : case1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 201
+#      LUT2                        : 6
+#      LUT3                        : 19
+#      LUT4                        : 42
+#      LUT5                        : 31
+#      LUT6                        : 94
+#      MUXF7                       : 9
+# FlipFlops/Latches                : 6
+#      FDE                         : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 10
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               5  out of  301440     0%  
+ Number of Slice LUTs:                  192  out of  150720     0%  
+    Number used as Logic:               192  out of  150720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    192
+   Number with an unused Flip Flop:     187  out of    192    97%  
+   Number with an unused LUT:             0  out of    192     0%  
+   Number of fully used LUT-FF pairs:     5  out of    192     2%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    600     2%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 6     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 0.633ns (Maximum Frequency: 1578.532MHz)
+   Minimum input arrival time before clock: 4.752ns
+   Maximum output required time after clock: 0.567ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 0.633ns (frequency: 1578.532MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               0.633ns (Levels of Logic = 1)
+  Source:            cout_0 (FF)
+  Destination:       cout_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: cout_0 to cout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.280   0.300  cout_0 (cout_0)
+     LUT6:I5->O            1   0.053   0.000  Mmux_cout[1]_cout[1]_mux_202_OUT121 (cout[1]_cout[1]_mux_202_OUT<0>)
+     FDE:D                    -0.012          cout_0
+    ----------------------------------------
+    Total                      0.633ns (0.333ns logic, 0.300ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 4904 / 12
+-------------------------------------------------------------------------
+Offset:              4.752ns (Levels of Logic = 10)
+  Source:            input1<2> (PAD)
+  Destination:       cout_1 (FF)
+  Destination Clock: clock rising
+
+  Data Path: input1<2> to cout_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.003   0.591  input1_2_IBUF (input1_2_IBUF)
+     LUT4:I0->O           20   0.053   0.682  input1[3]_input1[3]_OR_6_o1 (input1[3]_input1[3]_OR_6_o)
+     LUT6:I0->O            4   0.053   0.371  SF1 (SF1)
+     LUT3:I1->O            2   0.053   0.599  Mmux__n02442111 (Mmux__n0244211)
+     LUT6:I0->O            1   0.053   0.592  Mmux__n0244214 (Mmux__n0244215)
+     LUT6:I1->O            1   0.053   0.433  Mmux__n0244215 (Mmux__n0244216)
+     LUT6:I3->O            1   0.053   0.000  Mmux__n0244216_F (N70)
+     MUXF7:I0->O           2   0.186   0.438  Mmux__n0244216 (_n0244<1>)
+     LUT5:I2->O            1   0.053   0.433  Mmux_cout[1]_cout[1]_mux_202_OUT24_SW0 (N64)
+     LUT6:I3->O            1   0.053   0.000  Mmux_cout[1]_cout[1]_mux_202_OUT24 (cout[1]_cout[1]_mux_202_OUT<1>)
+     FDE:D                    -0.012          cout_1
+    ----------------------------------------
+    Total                      4.752ns (0.613ns logic, 4.139ns route)
+                                       (12.9% logic, 87.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              0.567ns (Levels of Logic = 1)
+  Source:            cout_0 (FF)
+  Destination:       cout<0> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: cout_0 to cout<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.280   0.283  cout_0 (cout_0)
+     OBUF:I->O                 0.003          cout_0_OBUF (cout<0>)
+    ----------------------------------------
+    Total                      0.567ns (0.283ns logic, 0.283ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    0.633|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 32.47 secs
+ 
+--> 
+
+Total memory usage is 288480 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

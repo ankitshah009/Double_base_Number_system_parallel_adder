@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "F:/pro/DSPA/proj_dspa/addititon_isim_beh.exe" -prj "F:/pro/DSPA/proj_dspa/addititon_beh.prj" "work.addititon" "work.glbl" 

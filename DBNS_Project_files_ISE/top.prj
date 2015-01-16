@@ -1,0 +1,4 @@
+verilog work "case.v"
+verilog work "temp.v"
+verilog work "addititon.v"
+verilog work "top.v"
